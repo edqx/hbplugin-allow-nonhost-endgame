@@ -7,7 +7,7 @@ import {
     MessageDirection
 } from "@skeldjs/hindenburg";
 
-@HindenburgPlugin("hbplugin-allow-endgame", "1.0.0", "none")
+@HindenburgPlugin("hbplugin-allow-nonhost-endgame", "1.0.0", "none")
 export class AllowEndgamePlugin extends WorkerPlugin {
     @MessageHandler(EndGameMessage, { override: true })
     onEndGameMessage(message: EndGameMessage, { sender }: PacketContext) {
